@@ -1,6 +1,17 @@
-// Function to load components
+// Function to load components with proper path handling
 function loadComponent(selector, filePath) {
-    fetch(filePath)
+    // Determine the correct path based on current location
+    let fullPath = filePath;
+    
+    // If we're in a subdirectory, adjust the path
+    if (window.location.pathname.includes('/') && !window.location.pathname.match(/^\/(index\.html)?$/)) {
+        // For pages in subdirectories, go up one level
+        if (filePath.startsWith('components/')) {
+            fullPath = '../' + filePath;
+        }
+    }
+    
+    fetch(fullPath)
         .then(response => response.text())
         .then(data => {
             document.querySelector(selector).innerHTML = data;
@@ -11,7 +22,7 @@ function loadComponent(selector, filePath) {
             }
         })
         .catch(error => {
-            console.error(`Error loading ${filePath}:`, error);
+            console.error(`Error loading ${fullPath}:`, error);
         });
 }
 
