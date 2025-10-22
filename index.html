@@ -5,15 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gymnázium Mnichovice</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="css/layout/button_anim.css">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
     
     <main>
-        <div class="container">
-            <h1>Welcome to Our School</h1>
-            <p>This is the main content area with consistent styling.</p>
+        <section class="hero-section">
+            <video class="hero-video" autoplay muted loop>
+                <source src="videos/school-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Wave Divider -->
+            <div class="wave-divider">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#f4f4f9" d="M0,224Q720,320,1440,224V320H0Z"></path>
+                </svg>
+            </div>
+        </section>
+        
+
+        <!-- Introduction Card (overlapping the video) -->
+        <div class="intro-card">
+            <p>Naše veřejné gymnázium představuje jedinečnou příležitost pro ty, kteří hledají vysokou úroveň vzdělání a zároveň touží po osobním prostoru, který jim dává možnost rozvíjet i další oblasti jejich zájmu.</p>
+            <button class="animated-button">
+                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                    ></path>
+                </svg>
+                <span class="text">O škole</span>
+                <span class="circle"></span>
+                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                    ></path>
+                </svg>
+            </button>
         </div>
+        
+        <!-- Principal's Welcome Section -->
+        <section class="welcome-section">
+            <div class="container" style="max-width: 850px; background-color: white; padding: 2rem; border-radius: 8px;">
+                <h2 class="section-title">ÚVODNÍ SLOVA PANÍ ŘEDITELKY ŠKOLY</h2>
+                <div class="welcome-content">
+                    <p>Většina veřejných středních škol funguje jako samostatné středoškolské vzdělávání. Naopak řada soukromých škol nabízí své služby „od základky po střední“. Od nich jsme se inspirovali a využili dlouholeté zkušenosti velké základní školy. Rozšiřujeme svou činnost o třídy gymnázia. Věříme v potenciál mnichovických gymnazistů a naplňování motta: <strong>Společne tvoříme budoucnost</strong></p>
+                    <button class="animated-button">
+                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                            ></path>
+                        </svg>
+                        <span class="text">Více</span>
+                        <span class="circle"></span>
+                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quick Links Section -->
+        <section class="quick-links">
+            <div class="container">
+                <div class="quick-links-grid">
+                    <div class="quick-link-card">
+                        <h3>Přijímací řízení</h3>
+                        <p>Informace o přijímacím procesu a kritériích</p>
+                        <a href="/primacky/" class="btn">Více info</a>
+                    </div>
+                    <div class="quick-link-card">
+                        <h3>Učební plán</h3>
+                        <p>Kompletní učební plán pro všechny ročníky</p>
+                        <a href="/info#ucebni-plan" class="btn">Více info</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <div id="footer-placeholder"></div>

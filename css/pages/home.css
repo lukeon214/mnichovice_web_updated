@@ -1,0 +1,182 @@
+/* Hero Section with Video */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wave-divider {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-top: -1px;
+}
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #006297;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    border: 2px solid #006297;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #006297;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #006297;
+    border: 2px solid #006297;
+}
+
+.btn-secondary:hover {
+    background-color: #006297;
+    color: white;
+}
+
+
+
+/* Introduction Card */
+.intro-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: -150px auto 3rem auto;
+    max-width: 700px;
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 4rem 0 1rem 0;
+}
+
+.section-title {
+    text-align: left;
+    margin-bottom: 2rem;
+    color: #444444;
+}
+
+.welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.welcome-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Quick Links Section */
+.quick-links {
+    padding: 0;
+}
+
+.quick-links-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.quick-link-card {
+    background: white;
+    color: #444;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-5px);
+}
+
+.quick-link-card h3 {
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.quick-link-card .btn {
+    background-color: #006297;
+    color: white;
+    border-color: #006297;
+}
+
+.quick-link-card .btn:hover {
+    background-color: white;
+    color: #006297;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 400px;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .intro-card {
+        margin: -80px 1rem 2rem 1rem;
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+    
+    .quick-links-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quick-link-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
