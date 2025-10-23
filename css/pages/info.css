@@ -1,0 +1,115 @@
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.content-section h2 {
+    color: #006297;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #006297;
+    margin-top: 1rem;
+}
+
+.content-section h3 {
+    color: #006297;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.feature-list {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.feature-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-top: 4px solid #006297;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    color: #006297;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* PODNIKAVÝ STUDENT Card with Image */
+.section-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.podnikavy-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.podnikavy-text {
+    flex: 1;
+}
+
+.podnikavy-image {
+    flex: 1;
+    text-align: center;
+}
+
+.podnikavy-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.principal-signature {
+    font-style: italic;
+    margin-top: 2rem;
+    text-align: right;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .content-section {
+        padding: 0 1rem;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .podnikavy-content {
+        flex-direction: column;
+    }
+    
+    .section-card {
+        padding: 1.5rem;
+    }
+
+}
