@@ -1,0 +1,59 @@
+{
+  "albums": [
+    {
+      "id": "dod",
+      "title": "Den otevřených dveří",
+      "description": "Fotografie z DOD 2025",
+      "coverImage": "../images/albums/dod/13.webp",
+      "photos": [
+        { "thumb": "../images/albums/dod/1.webp" },
+        { "thumb": "../images/albums/dod/2.webp" },
+        { "thumb": "../images/albums/dod/3.webp" },
+        { "thumb": "../images/albums/dod/4.webp" },
+        { "thumb": "../images/albums/dod/5.webp" },
+        { "thumb": "../images/albums/dod/6.webp" },
+        { "thumb": "../images/albums/dod/7.webp" },
+        { "thumb": "../images/albums/dod/8.webp" },
+        { "thumb": "../images/albums/dod/9.webp" },
+        { "thumb": "../images/albums/dod/10.webp" },
+        { "thumb": "../images/albums/dod/11.webp" },
+        { "thumb": "../images/albums/dod/12.webp" },
+        { "thumb": "../images/albums/dod/13.webp" },
+        { "thumb": "../images/albums/dod/14.webp" },
+        { "thumb": "../images/albums/dod/15.webp" },
+        { "thumb": "../images/albums/dod/16.webp" },
+        { "thumb": "../images/albums/dod/17.webp" },
+        { "thumb": "../images/albums/dod/18.webp" },
+        { "thumb": "../images/albums/dod/19.webp" },
+        { "thumb": "../images/albums/dod/20.webp" },
+        { "thumb": "../images/albums/dod/21.webp" },
+        { "thumb": "../images/albums/dod/22.webp" },
+        { "thumb": "../images/albums/dod/23.webp" },
+        { "thumb": "../images/albums/dod/24.webp" }
+      ]
+    },
+    {
+      "id": "jidelna",
+      "title": "Jídelna",
+      "description": "Fotografie z naší jídelny",
+      "coverImage": "../images/jidelna.jpeg",
+      "photos": [
+        { "thumb": "../images/albums/jidelna/1.webp" },
+        { "thumb": "../images/albums/jidelna/2.webp" },
+        { "thumb": "../images/albums/jidelna/3.webp" },
+        { "thumb": "../images/albums/jidelna/4.webp" },
+        { "thumb": "../images/albums/jidelna/5.webp" },
+        { "thumb": "../images/albums/jidelna/6.webp" },
+        { "thumb": "../images/albums/jidelna/7.webp" },
+        { "thumb": "../images/albums/jidelna/8.webp" },
+        { "thumb": "../images/albums/jidelna/9.webp" },
+        { "thumb": "../images/albums/jidelna/10.webp" },
+        { "thumb": "../images/albums/jidelna/11.webp" },
+        { "thumb": "../images/albums/jidelna/12.webp" },
+        { "thumb": "../images/albums/jidelna/13.webp" },
+        { "thumb": "../images/albums/jidelna/14.webp" },
+        { "thumb": "../images/albums/jidelna/15.webp" }
+      ]
+    }
+  ]
+}

@@ -48,7 +48,6 @@
     font-size: 1.2rem;
 }
 
-/* PODNIKAVÝ STUDENT Card with Image */
 .section-card {
     background: white;
     border-radius: 8px;
@@ -94,7 +93,6 @@
     text-align: right;
 }
 
-/* Mobile responsive styles */
 @media (max-width: 768px) {
     .content-section {
         padding: 0 1rem;

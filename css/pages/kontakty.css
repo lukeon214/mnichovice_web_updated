@@ -1,0 +1,88 @@
+.contacts-container {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.map-section {
+    flex: 1;
+}
+
+.contact-section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-section h2 {
+    color: #006297;
+    margin-top: 0;
+    border-bottom: 2px solid #006297;
+}
+
+.contact-details p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.contact-details a {
+    color: #004d99;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.transport-links h3 {
+    color: #006297;
+    margin-top: 0;
+}
+
+.transport-links a {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #004d99;
+    text-decoration: none;
+}
+
+.transport-links a:hover {
+    text-decoration: underline;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    color: #006297;
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .contacts-container {
+        flex-direction: column;
+    }
+    
+    .contact-section {
+        padding: 1.5rem 1rem;
+    }
+}

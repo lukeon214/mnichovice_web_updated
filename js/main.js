@@ -1,11 +1,7 @@
-// Function to load components with proper path handling
 function loadComponent(selector, filePath) {
-    // Determine the correct path based on current location
     let fullPath = filePath;
     
-    // If we're in a subdirectory, adjust the path
     if (window.location.pathname.includes('/') && !window.location.pathname.match(/^\/(index\.html)?$/)) {
-        // For pages in subdirectories, go up one level
         if (filePath.startsWith('components/')) {
             fullPath = '../' + filePath;
         }
@@ -16,7 +12,6 @@ function loadComponent(selector, filePath) {
         .then(data => {
             document.querySelector(selector).innerHTML = data;
             
-            // Initialize navbar functionality after loading
             if (filePath.includes('navbar')) {
                 initNavbar();
             }
@@ -26,7 +21,6 @@ function loadComponent(selector, filePath) {
         });
 }
 
-// Initialize navbar functionality
 function initNavbar() {
     const navToggle = document.getElementById('nav-toggle');
     const mainNav = document.getElementById('main-nav');
@@ -37,30 +31,25 @@ function initNavbar() {
             mainNav.classList.toggle('active');
         });
         
-        // Handle dropdowns on mobile
         const dropdowns = document.querySelectorAll('.dropdown');
         dropdowns.forEach(dropdown => {
             const dropdownLink = dropdown.querySelector('a');
             let isClickHandled = false;
             
             dropdownLink.addEventListener('click', function(e) {
-                // Check if we're on mobile (menu is active)
                 if (mainNav.classList.contains('active')) {
                     e.preventDefault();
                     dropdown.classList.toggle('active');
                 }
-                // On desktop, let the link work normally
             });
         });
         
-        // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             const isClickInsideNav = mainNav.contains(event.target) || navToggle.contains(event.target);
             if (!isClickInsideNav && mainNav.classList.contains('active')) {
                 navToggle.classList.remove('active');
                 mainNav.classList.remove('active');
                 
-                // Close any open dropdowns
                 document.querySelectorAll('.dropdown.active').forEach(dropdown => {
                     dropdown.classList.remove('active');
                 });
@@ -69,7 +58,6 @@ function initNavbar() {
     }
 }
 
-// Load components when page loads
 document.addEventListener('DOMContentLoaded', function() {
     loadComponent('#navbar-placeholder', 'components/navbar.html');
     loadComponent('#footer-placeholder', 'components/footer.html');

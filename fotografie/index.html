@@ -6,19 +6,39 @@
     <title>Gymnázium Mnichovice</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/pages/fotografie.css">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
     
     <main>
         <div class="container">
-            <h1>Sorry</h1>
-            <p>This page is currently under construction.</p>
+            <div class="gallery-header">
+                <h1>Fotografie</h1>
+            </div>
+            
+            <div id="albums-view" class="gallery-section">
+                <div id="albums-container" class="albums-container">
+                    <div class="no-albums">
+                        <p>Načítám fotoalba...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="album-view" class="gallery-section" style="display: none;">
+                <a href="#" id="back-to-albums" class="back-to-albums">
+                    <i class="fas fa-arrow-left"></i> Zpět na všechna alba
+                </a>
+                <h2 id="album-title" class="album-title"></h2>
+                <p id="album-description"></p>
+                <div id="photos-container" class="photos-grid"></div>
+            </div>
         </div>
     </main>
     
     <div id="footer-placeholder"></div>
     
     <script src="../js/main.js"></script>
+    <script src="../js/fotografie.js"></script>
 </body>
 </html>

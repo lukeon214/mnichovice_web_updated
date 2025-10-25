@@ -16,7 +16,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile responsive styles */
 @media (max-width: 768px) {
     .instagram-feed {
         padding: 2rem 0;
@@ -34,7 +33,6 @@
     }
 }
 
-/* Desktop large screens */
 @media (min-width: 1200px) {
     .instagram-iframe {
         height: 600px;
