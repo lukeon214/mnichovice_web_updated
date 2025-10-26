@@ -1,5 +1,88 @@
+.news-article {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.article-date {
+    color: #006297;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #006297;
+    padding-bottom: 0.5rem;
+}
+
+.article-title {
+    color: #006297;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.article-content {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.article-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.article-images {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.article-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.signature {
+    text-align: right;
+    font-style: italic;
+    color: #666;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .news-article {
+        padding: 1.5rem 1rem;
+    }
+    
+    .article-images {
+        flex-direction: column;
+    }
+    
+    .article-image {
+        min-width: 100%;
+    }
+    
+    .article-content p {
+        font-size: 1rem;
+    }
+}
+
 .instagram-feed {
-    padding: 3rem 0;
+    padding: 0rem 0;
 }
 
 .instagram-container {

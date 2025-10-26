@@ -1,5 +1,71 @@
+.collaboration-section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.collaboration-section h2 {
+    color: #006297;
+    margin-top: 1rem;
+    border-bottom: 2px solid #006297;
+    padding-bottom: 1rem;
+}
+
+.collaboration-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.collaboration-text {
+    flex: 2;
+}
+
+.collaboration-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.collaboration-media {
+    flex: 1;
+    text-align: center;
+}
+
+.logo-container {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.erasmus-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.document-link {
+    margin-top: 2rem;
+}
+
+.download-button:hover {
+    text-decoration: underline;
+}
+
+.download-button i {
+    font-size: 1.2rem;
+}
+
+.creators-section h2 {
+    color: #006297;
+    margin-top: 1rem;
+    border-bottom: 2px solid #006297;
+    padding-bottom: 1rem;
+}
+
 .page-open {
-    margin-block: 200px;
+    margin-block: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,4 +123,32 @@
     color: #2A2A2A;
     margin: 0;
     font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .creators-section h2 {
+        margin: 1rem;
+    }
+
+    .collaboration-content {
+        flex-direction: column;
+    }
+    
+    .collaboration-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .collaboration-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .roles {
+        gap: 10px;
+    }
+    
+    .title {
+        font-size: 14px;
+    }
 }
