@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/layout/button_anim.css">
+    <link rel="stylesheet" href="css/components/popup.css">
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -21,6 +22,23 @@
 </head>
 <body>
     <div id="navbar-placeholder"></div>
+
+    <!-- ========= POPUP CODE ========= -->
+    <div id="popup-container" class="popup-hidden">
+        <div id="popup-overlay"></div>
+        <div id="popup-content">
+            <span id="close-btn">&times;</span>
+            <h1>Dny otevřených dveří 2025/26</h1>
+            <h3>Přijďte se podívat na naše gymnázium</h3>
+            <ul>
+                <li><strong>úterý 25. 11. 2025</strong> od 18:00 hodin ve školní jídelně</li>
+                <li><strong>čtvrtek 11. 12. 2025</strong> od 18:00 hodin ve školní jídelně</li>
+                <li><strong>pondělí 19. 1. 2026</strong> od 18:00 hodin ve školní jídelně</li>
+            </ul>
+            <button onclick="window.location.href='/prijimacky/#dny-otevrenych-dveri'">Více info</button>
+        </div>
+    </div>
+    <!-- ======== END POPUP CODE ======== -->
     
     <main>
         <section class="hero-section">
@@ -98,5 +116,6 @@
     <div id="footer-placeholder"></div>
     
     <script src="js/main.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 </html>
