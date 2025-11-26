@@ -108,6 +108,13 @@
     font-weight: 500;
 }
 
+.chart-container-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
 @media (max-width: 992px) {
     .statistics-layout {
         flex-direction: column;

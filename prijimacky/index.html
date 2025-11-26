@@ -24,7 +24,7 @@
     <div id="navbar-placeholder"></div>
     
     <main>
-        <div class="container">
+        <div class="chart-container-section">
             
             <div class="content-section">
                 <h2>Přijímací řízení</h2>
@@ -125,7 +125,7 @@
             <div class="content-section">
                 <h2 id="dny-otevrenych-dveri">Dny otevřených dveří</h2>
                 <ul>
-                    <li><strong>úterý 25. 11. 2025</strong> od 18:00 hodin ve školní jídelně</li>
+                    <del><li><strong>úterý 25. 11. 2025</strong> od 18:00 hodin ve školní jídelně</li></del>
                     <li><strong>čtvrtek 11. 12. 2025</strong> od 18:00 hodin ve školní jídelně</li>
                     <li><strong>pondělí 19. 1. 2026</strong> od 18:00 hodin ve školní jídelně</li>
                 </ul>
@@ -173,8 +173,8 @@
                     const targetHeight = parseInt(bar.getAttribute('data-height'));
                     const fill = bar.querySelector('.bar-fill');
                     
-                    const maxHeight = 180;
-                    const scaleFactor = maxHeight / 110;
+                    const maxHeight = 150;
+                    const scaleFactor = maxHeight / 150;
                     const finalHeight = Math.min(targetHeight * scaleFactor, maxHeight);
                     
                     setTimeout(() => {
@@ -202,7 +202,7 @@
                 
                 setTimeout(() => {
                     animateBars();
-                }, 500);
+                }, 0);
             }
             
             function checkVisibility() {
@@ -221,7 +221,7 @@
             setTimeout(() => {
                 checkVisibility();
                 window.addEventListener('scroll', checkVisibility);
-            }, 500);
+            }, 0);
         });
     </script>
 </body>
