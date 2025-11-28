@@ -1,5 +1,43 @@
 {
   "albums": [
+          {
+      "id": "dod2026",
+      "title": "Den otevřených dveří 25. ledna 2025",
+      "description": "Fotografie z naší jídelny",
+      "coverImage": "../images/albums/dod2025/4.webp",
+      "photos": [
+        { "thumb": "../images/albums/dod2025/1.webp" },
+        { "thumb": "../images/albums/dod2025/2.webp" },
+        { "thumb": "../images/albums/dod2025/3.webp" },
+        { "thumb": "../images/albums/dod2025/4.webp" },
+        { "thumb": "../images/albums/dod2025/5.webp" },
+        { "thumb": "../images/albums/dod2025/6.webp" },
+        { "thumb": "../images/albums/dod2025/7.webp" }
+      ]
+    },
+    {
+      "id": "jidelna",
+      "title": "Jídelna",
+      "description": "Fotografie z naší jídelny",
+      "coverImage": "../images/jidelna.jpeg",
+      "photos": [
+        { "thumb": "../images/albums/jidelna/1.webp" },
+        { "thumb": "../images/albums/jidelna/2.webp" },
+        { "thumb": "../images/albums/jidelna/3.webp" },
+        { "thumb": "../images/albums/jidelna/4.webp" },
+        { "thumb": "../images/albums/jidelna/5.webp" },
+        { "thumb": "../images/albums/jidelna/6.webp" },
+        { "thumb": "../images/albums/jidelna/7.webp" },
+        { "thumb": "../images/albums/jidelna/8.webp" },
+        { "thumb": "../images/albums/jidelna/9.webp" },
+        { "thumb": "../images/albums/jidelna/10.webp" },
+        { "thumb": "../images/albums/jidelna/11.webp" },
+        { "thumb": "../images/albums/jidelna/12.webp" },
+        { "thumb": "../images/albums/jidelna/13.webp" },
+        { "thumb": "../images/albums/jidelna/14.webp" },
+        { "thumb": "../images/albums/jidelna/15.webp" }
+      ]
+    },
     {
       "id": "dod",
       "title": "Den otevřených dveří",
@@ -30,29 +68,6 @@
         { "thumb": "../images/albums/dod/22.webp" },
         { "thumb": "../images/albums/dod/23.webp" },
         { "thumb": "../images/albums/dod/24.webp" }
-      ]
-    },
-    {
-      "id": "jidelna",
-      "title": "Jídelna",
-      "description": "Fotografie z naší jídelny",
-      "coverImage": "../images/jidelna.jpeg",
-      "photos": [
-        { "thumb": "../images/albums/jidelna/1.webp" },
-        { "thumb": "../images/albums/jidelna/2.webp" },
-        { "thumb": "../images/albums/jidelna/3.webp" },
-        { "thumb": "../images/albums/jidelna/4.webp" },
-        { "thumb": "../images/albums/jidelna/5.webp" },
-        { "thumb": "../images/albums/jidelna/6.webp" },
-        { "thumb": "../images/albums/jidelna/7.webp" },
-        { "thumb": "../images/albums/jidelna/8.webp" },
-        { "thumb": "../images/albums/jidelna/9.webp" },
-        { "thumb": "../images/albums/jidelna/10.webp" },
-        { "thumb": "../images/albums/jidelna/11.webp" },
-        { "thumb": "../images/albums/jidelna/12.webp" },
-        { "thumb": "../images/albums/jidelna/13.webp" },
-        { "thumb": "../images/albums/jidelna/14.webp" },
-        { "thumb": "../images/albums/jidelna/15.webp" }
       ]
     }
   ]
