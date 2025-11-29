@@ -1,0 +1,13 @@
+.some-section {
+  position: relative;
+}
+
+.some-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#cfcfcf 2px, transparent 2px);
+  background-size: 22px 22px;
+  opacity: 0.3;
+  z-index: -1;
+}

@@ -36,6 +36,10 @@
     text-decoration: none;
 }
 
+.link-space {
+    margin-top: 1rem;
+}
+
 @media (max-width: 768px) {
     .content-section {
         
