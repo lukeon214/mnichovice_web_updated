@@ -7,6 +7,9 @@ function loadComponent(selector, filePath) {
         }
     }
     
+    const cacheBuster = `cb=${new Date().getTime()}`;
+    fullPath += (fullPath.includes('?') ? '&' : '?') + cacheBuster;
+    
     fetch(fullPath)
         .then(response => response.text())
         .then(data => {
