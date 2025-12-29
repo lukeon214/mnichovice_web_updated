@@ -2,8 +2,8 @@
   "albums": [
           {
       "id": "dod2026",
-      "title": "Den otevřených dveří 25. ledna 2025",
-      "description": "Fotografie z naší jídelny",
+      "title": "Den otevřených dveří 25. 11. 2025",
+      "description": "Fotografie z DOD s našimi studenty",
       "coverImage": "../images/albums/dod2025/4.webp",
       "photos": [
         { "thumb": "../images/albums/dod2025/1.webp" },
