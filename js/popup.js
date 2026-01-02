@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const CURRENT_VERSION = "v2.2"; // version
+    const CURRENT_VERSION = "v2.3"; // version
 
     const popupContainer = document.getElementById('popup-container');
     const closeBtn = document.getElementById('close-btn');
