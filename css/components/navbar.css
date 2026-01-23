@@ -169,6 +169,7 @@
         max-height: calc(100vh - 70px);
         overflow-y: auto;
         margin-top: 0px;
+        height: 1000px;
     }
     
     .main-nav.active {
