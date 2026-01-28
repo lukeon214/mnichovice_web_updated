@@ -1,6 +1,6 @@
 .news-article {
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: -2rem;
 }
 
 .article-date {
@@ -109,7 +109,6 @@
 }
 
 .admission-info {
-    margin-top: 2rem;
     padding-top: 1rem;
     font-size: 1.05rem;
 }
