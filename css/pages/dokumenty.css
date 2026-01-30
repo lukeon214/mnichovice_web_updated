@@ -94,6 +94,62 @@
     text-align: right;
 }
 
+/* For docs */
+.doc-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem;
+}
+
+.doc-wrapper :hover {
+    background-color: #e3e3e3d3;
+}
+
+.doc-name {
+    margin: 0;
+    flex: 1;
+    padding-right: 1.5rem;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.doc-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.doc-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-view {
+    background-color: transparent;
+    border: 1px solid #006297;
+    color: #006297;
+}
+
+.btn-view:hover {
+    background-color: #f0f8ff;
+}
+
+.btn-download {
+    background-color: #006297;
+    color: white;
+    border: 1px solid #006297;
+}
+
+.btn-download:hover {
+    background-color: #004e75;
+}
+
 @media (max-width: 768px) {
     .content-section {
         padding: 0 1rem;
@@ -109,6 +165,17 @@
     
     .section-card {
         padding: 1.5rem;
+    }
+
+        .doc-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .doc-actions {
+        width: 100%;
+        justify-content: flex-end;
     }
 
 }
