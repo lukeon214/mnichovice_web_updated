@@ -1,6 +1,5 @@
 .news-article {
-    padding: 2rem;
-    margin-bottom: -2rem;
+    margin-top: 2rem;
 }
 
 .article-date {
@@ -113,6 +112,12 @@
     font-size: 1.05rem;
 }
 
+.picture-layout {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
 @media (max-width: 768px) {
     .news-article {
         padding: 1.5rem 1rem;
@@ -137,6 +142,10 @@
     .admission-qr {
         width: 260px;
         margin: 1.5rem auto 0;
+    }
+
+    .picture-layout {
+        flex-direction: column;
     }
 }
 
