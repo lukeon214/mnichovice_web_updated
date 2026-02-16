@@ -6,9 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const albumTitle = document.getElementById('album-title');
     const albumDescription = document.getElementById('album-description');
     const backToAlbumsBtn = document.getElementById('back-to-albums');
-    
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+
     let albumsData = [];
-    
+    let currentPhotos = [];
+    let currentIndex = 0;
+
     function loadAlbums() {
         fetch('photos.json')
             .then(response => response.json())
@@ -21,13 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 albumsContainer.innerHTML = '<div class="no-albums"><p>Chyba při načítání fotoalb. Prosím zkuste to později.</p></div>';
             });
     }
-    
+
     function displayAlbums(albums) {
         if (albums.length === 0) {
             albumsContainer.innerHTML = '<div class="no-albums"><p>Žádná fotoalba nejsou k dispozici.</p></div>';
             return;
         }
-        
+
         let albumsHTML = '';
         albums.forEach(album => {
             const photoCount = album.photos ? album.photos.length : 0;
@@ -42,9 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
         });
-        
+
         albumsContainer.innerHTML = albumsHTML;
-        
+
         document.querySelectorAll('.album-card').forEach(card => {
             card.addEventListener('click', function() {
                 const albumId = this.getAttribute('data-album-id');
@@ -52,43 +61,102 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
+
     function showAlbum(albumId) {
         const album = albumsData.find(a => a.id === albumId);
         if (!album) return;
-        
+
         albumTitle.textContent = album.title;
         albumDescription.textContent = album.description;
-        
+
         displayPhotos(album.photos);
-        
+
         albumsView.style.display = 'none';
         albumView.style.display = 'block';
     }
-    
+
     function displayPhotos(photos) {
         if (!photos || photos.length === 0) {
             photosContainer.innerHTML = '<p>Žádné fotografie v tomto albu.</p>';
             return;
         }
-        
+
+        currentPhotos = photos;
+
         let photosHTML = '';
-        photos.forEach(photo => {
+        photos.forEach((photo, index) => {
             photosHTML += `
-                <div class="photo-item">
-                    <img src="${photo.thumb || photo.src}" alt="Fotografie" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuKAnlBob3RvIG5vdCBhdmFpbGFibGXigJ48L3RleHQ+PC9zdmc+'">
+                <div class="photo-item" data-index="${index}">
+                    <img src="${photo.thumb || photo.src}" 
+                         alt="Fotografie" 
+                         loading="lazy"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuKAnlBob3RvIG5vdCBhdmFpbGFibGXigJ48L3RleHQ+PC9zdmc+'">
                 </div>
             `;
         });
-        
+
         photosContainer.innerHTML = photosHTML;
     }
-    
+
+    function openLightbox(index) {
+        currentIndex = index;
+        updateLightbox();
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function updateLightbox() {
+        if (currentPhotos.length === 0) return;
+        const photo = currentPhotos[currentIndex];
+        lightboxImage.src = photo.src || photo.thumb;
+        lightboxCounter.textContent = `${currentIndex + 1} / ${currentPhotos.length}`;
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'visible';
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + currentPhotos.length) % currentPhotos.length;
+        updateLightbox();
+    }
+
+    function showNext() {
+        currentIndex = (currentIndex + 1) % currentPhotos.length;
+        updateLightbox();
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', showPrev);
+    lightboxNext.addEventListener('click', showNext);
+
+    // click outside for close, well see maybe ill remove it
+    lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', e => {
+        if (lightbox.style.display !== 'flex') return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+    });
+
+    photosContainer.addEventListener('click', e => {
+        const item = e.target.closest('.photo-item');
+        if (item) {
+            const index = parseInt(item.dataset.index);
+            if (!isNaN(index)) openLightbox(index);
+        }
+    });
+
     backToAlbumsBtn.addEventListener('click', function(e) {
         e.preventDefault();
         albumView.style.display = 'none';
         albumsView.style.display = 'block';
+        if (lightbox.style.display === 'flex') closeLightbox();
     });
-    
+
     loadAlbums();
 });
