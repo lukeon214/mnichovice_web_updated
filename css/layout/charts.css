@@ -114,6 +114,55 @@
     padding: 0 1rem;
 }
 
+.archive-accordion {
+    margin-top: 1rem;
+    border: 1px solid #d0dce8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.archive-accordion summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    background: #e8f0f7;
+    color: #006297;
+    font-weight: 600;
+    font-size: 1rem;
+    user-select: none;
+    transition: background 0.2s ease;
+}
+
+.archive-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.archive-accordion summary:hover {
+    background: #d6e8f5;
+}
+
+.archive-accordion summary .accordion-icon {
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.archive-accordion[open] summary .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.archive-accordion-body {
+    padding: 1.5rem;
+    background: #f4f4f9;
+    border-top: 1px solid #d0dce8;
+}
+
+.archive-accordion-body .admission-section {
+    margin-top: 0;
+}
+
 
 @media (max-width: 992px) {
     .statistics-layout {
