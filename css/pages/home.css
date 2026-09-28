@@ -144,6 +144,12 @@
     color: #006297;
 }
 
+@media (max-width: 900px) {
+    .welcome-section {
+        padding-inline: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-section {
         height: 400px;
@@ -166,7 +172,7 @@
     .quick-links-grid {
         flex-direction: column;
         align-items: center;
-        padding: 0;
+        padding: 0 1rem;
     }
     
     .quick-link-card {
