@@ -17,8 +17,12 @@ main {
     margin-bottom: 3rem;
 }
 
-/* Reserve the navbar's space before it's injected so the page doesn't jump */
+/* Reserve the navbar's space before it's injected so the page doesn't jump.
+   The placeholder is what sticks: .navbar is only as tall as its wrapper, so it can't stick on its own. */
 #navbar-placeholder {
     min-height: 70px;
     background-color: #006297;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
