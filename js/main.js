@@ -1,15 +1,6 @@
 function loadComponent(selector, filePath) {
-    let fullPath = filePath;
-    
-    if (window.location.pathname.includes('/') && !window.location.pathname.match(/^\/(index\.html)?$/)) {
-        if (filePath.startsWith('components/')) {
-            fullPath = '../' + filePath;
-        }
-    }
-    
-    const cacheBuster = `cb=${new Date().getTime()}`;
-    fullPath += (fullPath.includes('?') ? '&' : '?') + cacheBuster;
-    
+    const fullPath = '/' + filePath;
+
     fetch(fullPath)
         .then(response => response.text())
         .then(data => {

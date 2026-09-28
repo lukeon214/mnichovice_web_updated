@@ -1,5 +1,4 @@
 <IfModule mod_headers.c>
-  Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
-  Header set Pragma "no-cache"
-  Header set Expires "0"
+  # Always revalidate with the server, but let unchanged files be answered with 304 instead of re-downloading
+  Header set Cache-Control "no-cache"
 </IfModule>
