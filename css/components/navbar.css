@@ -19,6 +19,7 @@
 .nav-logo {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .nav-logo a {
@@ -33,13 +34,14 @@
 .main-nav {
     display: flex;
     list-style: none;
-    margin-top: 25px;
+    margin: 0;
     padding: 0;
     gap: 1.5rem;
 }
 
 .main-nav li {
     position: relative;
+    margin-bottom: 0;
 }
 
 .main-nav a {
@@ -115,8 +117,12 @@
     display: flex;
     list-style: none;
     gap: 1rem;
-    margin-top: 25px;
+    margin: 0;
     padding: 0;
+}
+
+.social-icon {
+    margin-bottom: 0;
 }
 
 .social-icon a {
@@ -143,13 +149,14 @@
     transition: 0.3s;
 }
 
-@media (max-width: 1024px) {
-    .main-nav a {   
+@media (max-width: 1200px) {
+    .main-nav a {
         font-size: 14px;
     }
 }
 
-@media (max-width: 768px) {
+/* The full menu doesn't fit below ~1024px, so tablets get the hamburger menu too */
+@media (max-width: 1024px) {
     .nav-toggle {
         display: flex;
     }
@@ -166,10 +173,8 @@
         box-shadow: 0 10px 27px rgba(0,0,0,0.05);
         padding: 2rem 0;
         gap: 0;
-        max-height: calc(100vh - 70px);
+        height: calc(100vh - 70px);
         overflow-y: auto;
-        margin-top: 0px;
-        height: 1000px;
     }
     
     .main-nav.active {
