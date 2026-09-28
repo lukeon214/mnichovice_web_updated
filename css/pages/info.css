@@ -100,14 +100,15 @@
     
     .cards-grid {
         grid-template-columns: 1fr;
+        margin-inline: 1rem;
     }
-    
+
     .podnikavy-content {
         flex-direction: column;
     }
-    
+
     .section-card {
         padding: 1.5rem;
+        margin-inline: 1rem;
     }
-
 }
