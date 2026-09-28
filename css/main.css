@@ -16,3 +16,9 @@ main {
     flex: 1;
     margin-bottom: 3rem;
 }
+
+/* Reserve the navbar's space before it's injected so the page doesn't jump */
+#navbar-placeholder {
+    min-height: 70px;
+    background-color: #006297;
+}
