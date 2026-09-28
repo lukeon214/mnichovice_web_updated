@@ -21,12 +21,8 @@
     overflow: hidden;
     line-height: 0;
     margin-top: -1px;
-}
-
-.wave-divider svg {
-    display: block;
-    width: 100%;
-    height: auto;
+    aspect-ratio: 1440 / 320;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath fill='%23f4f4f9' d='M0,224Q720,320,1440,224V320H0Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
 }
 
 .btn {
