@@ -16,48 +16,25 @@
     margin-top: 1.5rem;
 }
 
-.exam-dates {
-    margin: 1rem 0;
-}
-
-.pdf-link {
-    display: inline-block;
-    background: #006297;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 4px;
-    margin: 0.5rem 0;
-    transition: background-color 0.3s ease;
-}
-
-.pdf-link:hover {
-    background: #006297;
-    text-decoration: none;
-}
-
 .link-space {
     margin-top: 1rem;
 }
 
-.admission-qr {
-    width: 220px;
-    text-align: center;
-    flex-shrink: 0;
+.download-heading {
+    font-size: large;
+    margin-top: 2rem;
 }
 
-.picture-layout {
-    display: flex;
-    gap: 2.5rem;
-    align-items: center;
+/* Highlighted link box for the most important document (e.g. current results) */
+.highlight-box {
+    background: #e8f0f7;
+    border-left: 4px solid #006297;
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin-top: 1.75rem;
 }
 
-@media (max-width: 768px) {
-    .content-section {
-        
-    }
-
-    .picture-layout {
-        flex-direction: column;
-    }
+.highlight-box p {
+    margin: 0;
+    font-size: 1.05rem;
 }
