@@ -9,6 +9,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Keep anchor targets from hiding under the sticky navbar */
+[id] {
+    scroll-margin-top: 80px;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
